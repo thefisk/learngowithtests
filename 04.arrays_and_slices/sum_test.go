@@ -30,6 +30,8 @@ func TestSumAll (t *testing.T) {
 
 func TestSumAllTails(t *testing.T) {
 
+	// Helper function assigned to variable inside Test Function
+	// Reduces surface area of API - won't be exported
 	checkSums := func(t testing.TB, got, want []int) {
 		t.Helper()
 		if !reflect.DeepEqual(got, want) {
